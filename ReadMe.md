@@ -1,3 +1,97 @@
+Tecnologías Utilizadas
+
+Java 17+
+
+Spring Boot 3+
+
+Firebase Firestore (Base de datos NoSQL)
+
+Maven (Gestor de dependencias)
+
+Swagger (Documentación de la API)
+
+Características
+
+Operaciones CRUD para la gestión de productos.
+
+Conexión con Firebase Firestore.
+
+Manejo de excepciones y validaciones.
+
+Configuración de seguridad básica.
+
+Instalación y Configuración
+
+Clonar el repositorio:
+
+git clone https://github.com/tu_usuario/tu_repositorio.git
+cd tu_repositorio
+
+Configurar Firebase:
+
+Descarga el archivo de credenciales dbproyecttest.json desde Firebase Console.
+
+Coloca el archivo en src/main/resources/.
+
+Configurar propiedades en application.properties:
+
+spring.application.name=api-productos
+firebase.database.url=https://tu-proyecto.firebaseio.com
+
+Compilar y ejecutar la aplicación:
+
+mvn spring-boot:run
+
+Endpoints
+
+Método
+
+URL
+
+Descripción
+
+GET
+
+/productos
+
+Obtener todos los productos
+
+GET
+
+/productos/{id}
+
+Obtener un producto por ID
+
+POST
+
+/productos
+
+Crear un nuevo producto
+
+PUT
+
+/productos/{id}
+
+Actualizar un producto
+
+DELETE
+
+/productos/{id}
+
+Eliminar un producto
+
+Documentación de la API
+
+La documentación generada por Swagger está disponible en:
+
+http://localhost:8080/swagger-ui.html
+
+Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre un issue o un pull request.
+
+
+____________________________________________________________________________
 # 1. Configurar la URL base
    Si estás ejecutando tu aplicación en localhost, la URL base será:
 
