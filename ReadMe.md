@@ -1,104 +1,78 @@
-Tecnologías Utilizadas
+# 📌 Descripción
 
-Java 17+
+Este proyecto es una API REST desarrollada en Spring Boot que permite la gestión de productos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar) con una base de datos NoSQL en Firebase Firestore.
 
-Spring Boot 3+
+## 🛠️ Tecnologías Utilizadas
 
-Firebase Firestore (Base de datos NoSQL)
+- 🚀 **Java 23**
+- 🌱 **Spring Boot 3+**
+- 🔥 **Firebase Firestore** (Base de datos NoSQL)
+- 📦 **Maven** (Gestor de dependencias)
+- 📜 **Swagger** (Documentación de la API)
 
-Maven (Gestor de dependencias)
+## ✨ Características
 
-Swagger (Documentación de la API)
+- ✅ Operaciones CRUD para la gestión de productos.
+- ✅ Conexión con Firebase Firestore.
+- ✅ Manejo de excepciones y validaciones.
+- ✅ Configuración de seguridad básica.
 
-Características
+## 📥 Instalación y Configuración
 
-Operaciones CRUD para la gestión de productos.
-
-Conexión con Firebase Firestore.
-
-Manejo de excepciones y validaciones.
-
-Configuración de seguridad básica.
-
-Instalación y Configuración
-
-Clonar el repositorio:
-
+### 🔹 Clonar el repositorio:
+```bash
 git clone https://github.com/tu_usuario/tu_repositorio.git
 cd tu_repositorio
+```
 
 Configurar Firebase:
-
 Descarga el archivo de credenciales dbproyecttest.json desde Firebase Console.
 
 Coloca el archivo en src/main/resources/.
 
-Configurar propiedades en application.properties:
+🔹 Configurar propiedades en application.properties:
+```bash
+server.port=8080
+```
 
-spring.application.name=api-productos
-firebase.database.url=https://tu-proyecto.firebaseio.com
-
-Compilar y ejecutar la aplicación:
-
+🔹 Compilar y ejecutar la aplicación:
+```bash
 mvn spring-boot:run
+```
 
-Endpoints
 
-Método
+📡 Endpoints
+Método	URL	Descripción
+```bash
+GET	/productos	Obtener todos los productos
+GET	/productos/{id}	Obtener un producto por ID
+POST	/productos	Crear un nuevo producto
+PUT	/productos/{id}	Actualizar un producto
+DELETE	/productos/{id}	Eliminar un producto
+```
 
-URL
 
-Descripción
 
-GET
-
-/productos
-
-Obtener todos los productos
-
-GET
-
-/productos/{id}
-
-Obtener un producto por ID
-
-POST
-
-/productos
-
-Crear un nuevo producto
-
-PUT
-
-/productos/{id}
-
-Actualizar un producto
-
-DELETE
-
-/productos/{id}
-
-Eliminar un producto
-
-Documentación de la API
-
-La documentación generada por Swagger está disponible en:
-
-http://localhost:8080/swagger-ui.html
-
-Contribuciones
-
+🤝 Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor abre un issue o un pull request.
+
+📝 Licencia
+📜 Este proyecto está bajo la licencia MIT.
+
+
 
 
 ____________________________________________________________________________
 # 1. Configurar la URL base
    Si estás ejecutando tu aplicación en localhost, la URL base será:
 
-bash
+
 Copiar
 Editar
+
+```bash
 http://localhost:8080/api/products
+```
 Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio correspondiente.
 #
 
@@ -113,12 +87,12 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Copiar
    Editar
 
-
+```bash
    {
    "name": "Producto1",
    "description": "Descripción del producto 1"
    }
-
+```
    Respuesta esperada: Un timestamp de la actualización en Firebase.
    
 
@@ -129,10 +103,13 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    json
    Copiar
    Editar
+
+   ```bash
    {
    "name": "Producto1",
    "description": "Descripción del producto 1"
    }
+```
 
    # C) Obtener Todos los Productos (GET)
    Método: GET
@@ -142,6 +119,7 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Copiar
    Editar
 
+```bash
    [
    {
    "name": "Producto1",
@@ -152,6 +130,7 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    "description": "Descripción del producto 2"
    }
    ]
+```
 
    # D) Actualizar un Producto (PUT)
    Método: PUT
@@ -163,17 +142,21 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Copiar
    Editar
 
-
+```bash
    {
    "name": "Producto1",
    "description": "Nueva descripción del producto 1"
    }
+```
 
    Respuesta esperada: Un timestamp de la actualización.
    
 # E) Eliminar un Producto (DELETE)
    Método: DELETE
-   URL: http://localhost:8080/api/products/Producto1
+   URL:
+   ```bash
+   http://localhost:8080/api/products/Producto1
+```
 
    Respuesta esperada:
    csharp
