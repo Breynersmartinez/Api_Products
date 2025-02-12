@@ -88,10 +88,14 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Editar
 
 ```bash
-   {
-   "name": "Producto1",
-   "description": "Descripción del producto 1"
-   }
+ {
+    "name": " Blusa oversize mujer diseño ",
+    "description": " Prenda tipo oversize",
+       "price": 2500.00,
+    "color": "black",
+    "size":  "l "
+}
+
 ```
    Respuesta esperada: Un timestamp de la actualización en Firebase.
    
@@ -105,10 +109,14 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Editar
 
    ```bash
-   {
-   "name": "Producto1",
-   "description": "Descripción del producto 1"
-   }
+  {
+    "name": " Blusa oversize mujer diseño ",
+    "description": " Prenda tipo oversize",
+       "price": 2500.00,
+    "color": "black",
+    "size":  "l "
+}
+
 ```
 
    # C) Obtener Todos los Productos (GET)
@@ -120,16 +128,29 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Editar
 
 ```bash
-   [
-   {
-   "name": "Producto1",
-   "description": "Descripción del producto 1"
-   },
-   {
-   "name": "Producto2",
-   "description": "Descripción del producto 2"
-   }
-   ]
+[
+    {
+        "name": " Blusa oversize mujer ",
+        "description": " Prenda tipo oversize",
+        "price": 2500.0,
+        "color": "black",
+        "size": "l "
+    },
+    {
+        "name": "Producto1",
+        "description": "Descripción del producto 1",
+        "price": null,
+        "color": null,
+        "size": null
+    },
+    {
+        "name": "Producto2",
+        "description": "Descripción del producto 1",
+        "price": null,
+        "color": null,
+        "size": null
+    }
+]
 ```
 
    # D) Actualizar un Producto (PUT)
@@ -143,10 +164,14 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    Editar
 
 ```bash
-   {
-   "name": "Producto1",
-   "description": "Nueva descripción del producto 1"
-   }
+ {
+    "name": " Blusa oversize mujer diseño ",
+    "description": " Prenda tipo oversize",
+       "price": 2500.00,
+    "color": "black",
+    "size":  "l "
+}
+
 ```
 
    Respuesta esperada: Un timestamp de la actualización.
@@ -162,5 +187,9 @@ Si la ejecutas en otro servidor, cambia localhost:8080 por la IP o dominio corre
    csharp
    Copiar
    Editar
+
+
+  ## NOTA:
+# Si se corren varias apis en un mismo localhost se debn usar diferentes puertos
 
    Document with Product ID Producto1 has been deleted successfully
